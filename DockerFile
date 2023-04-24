@@ -6,6 +6,10 @@ EXPOSE 5000
 
 COPY package.json package-lock.json ./
 
+# COPY index.js /app/
 RUN npm install
 
 COPY . ./
+
+# CMD ["node","npm start"]
+CMD npm start
